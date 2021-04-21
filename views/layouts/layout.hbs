@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8" />
+    <style>
+    #active {background-color:rgb(180, 66, 1);}
+           
+        
+ 
+  nav a:link {
+  background-color: rgb(92, 91, 91);
+  color: rgb(255, 255, 255);
+  
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Times New Roman", Times, serif;
+}
+
+  nav a:hover {
+  background-color: rgb(180, 66, 1);
+  color: white;
+}
+a:link, a:visited {
+  color: rgb(255, 255, 255);
+  
+  text-decoration: none;
+  
+}
+a:hover, a:active {
+ text-decoration: none;
+  color: rgb(180, 66, 1);
+}
+body{
+background-color: black;
+display: grid;
+  justify-content: center;
+  
+  grid-template-columns: 1100px;
+  grid-template-rows: auto auto auto;
+  padding-top: 5%;
+}
+.grid-container-logo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color:rgb(92, 91, 91);
+  padding: 10px;
+  grid-gap: 10px;
+  justify-content: space-between;
+}
+.grid-item-logo {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  
+}
+ 
+ 
+.grid-item {
+   background-color: rgb(55, 56, 56);
+   display: inline-grid;
+   padding: 15px;
+   grid-gap: 10px;
+}
+.grid-item2 {
+   background-color: rgb(55, 56, 56);
+   display: grid;
+   padding: 15px;
+   grid-gap: 10px;
+   grid-template-columns: 215px 600px auto;
+}
+.grid-item-post {
+   
+   border: 1px solid rgba(0, 0, 0, 0.8);
+   padding: 10px;
+}
+
+.main{
+  background-color: rgb(92, 91, 91);
+ 
+}
+nav {
+  
+}
+.footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+
+    </style>
+
+</head>
+<body >
+    {{> header}}
+
+    {{> menu}}
+      
+    {{{body}}}
+      
+    {{> footer}}
+</body>
+<html>

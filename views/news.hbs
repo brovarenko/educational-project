@@ -1,0 +1,16 @@
+
+    <div class='main grid-item '>
+    <a href="/news/create">Добавить Новость</a>
+    <h1>Список новостей</h1>
+         {{#each news}}
+         <div class='grid-item'>
+                <div class='grid-item2'>
+                    <img class='grid-item-post' src="https://upload.wikimedia.org/wikipedia/ru/thumb/4/4f/Virtus.proLogo.png/1200px-Virtus.proLogo.png" alt="Cinque Terre" width="200" height="200">
+            <a class='grid-item-post' href='/news/post/{{this._id}}'><p1>{{this.name}}</p1></a>
+            <a class='grid-item-post' href='/news/delete/{{this._id}}'>delete</a>
+            
+            </div>
+                </div>
+         {{/each}}
+     </div>
+

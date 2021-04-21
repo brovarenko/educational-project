@@ -1,0 +1,15 @@
+
+<div class="grid-item"> 
+    <nav>
+{{#if isNews}}
+<a  href="/">Home</a>  <a id="active"  href="/news">News</a> <a  href="/users">Users</a>
+{{else if isHome}}
+<a id="active" href="/">Home</a>  <a  href="/news">News</a> <a  href="/users">Users</a>
+{{else if isUsers}}
+<a  href="/">Home</a>  <a  href="/news">News</a> <a id="active" href="/users">Users</a>
+{{else}}
+<a  href="/">Home</a>  <a  href="/news">News</a> <a  href="/users">Users</a>
+{{/if}}
+</nav>
+ </div>
+
