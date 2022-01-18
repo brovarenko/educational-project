@@ -111,9 +111,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
+var dev_db_url = "mongodb+srv://brrov:1q2w3e4r@cluster0.fsf3o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 const start = async() => {
-  await mongoose.connect("mongodb+srv://brrov:1q2w3e4r@cluster0.fsf3o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 
+  await mongoose.connect(mongoDB, 
   { 
     useUnifiedTopology: true ,
     useNewUrlParser:true,
