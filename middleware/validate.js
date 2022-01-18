@@ -5,9 +5,9 @@ exports.requireTitle = function (req, res, next) {
     } else {
     res.error('Title is required.');
     res.redirect('/post');
+     }
     }
-    }
-exports.requireTitleLengthAbove = function(len) {
+    exports.requireTitleLengthAbove = function(len) {
     return (req, res, next) => {
     const title = req.body.title;
     if (title.length > len) {
@@ -15,7 +15,7 @@ exports.requireTitleLengthAbove = function(len) {
     } else {
     res.send(`Title must be longer than ${len}.`);
     res.redirct('/post');
-    }
-    }
+      }
+     }
     }
     

@@ -12,7 +12,6 @@ const mongoose = require("mongoose");
 const cookieParser = require('cookie-parser')
 const Handlebars = require('handlebars')
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
-const Disciplines = require('./models/disciplines.js')
 const matchesRouter = require("./routes/matchesRouter.js");
 const authRouter = require("./routes/authRouter.js");
 const rolemiddleware = require('./middleware/rolemiddleware')
@@ -44,6 +43,7 @@ app.get('/about', function(req, res) {
  
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
+
 app.use("/auth", authRouter)
 app.use("/matches", matchesRouter)
 app.use("/news", newsRouter)
@@ -52,6 +52,7 @@ app.use("/team", teamsRouter)
 app.use("/achievements", achievementsRouter)
 app.use("/partners", partnersRouter)
 app.use("/", homeRouter)
+
 
 const hbs = exphbs.create({
   defaultLayout:'layout',
