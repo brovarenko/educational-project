@@ -1,0 +1,23 @@
+
+
+
+     <div class="main">
+     <form action="updateScore" method="POST">
+          <label>Match:</label><br>
+        <select  name="id">
+    {{#each matches}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br>
+        <label>score 1:</label><br>
+        <input name="score1" ><br><br>
+        <label>score 2:</label><br>
+        <input name="score2" ><br><br>
+        <input type="submit" value="submit" />  
+    {{#if errors}}
+       {{#each errors}}
+       <p style="color: white;">{{this.msg}}</p>
+       {{/each}}
+    {{/if}}
+     </form>
+</div>

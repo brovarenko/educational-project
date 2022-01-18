@@ -1,0 +1,13 @@
+.grid-dis-admin{
+    display: grid;
+     grid-template-columns: auto 100px  ;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+
+  }
+  .grid-dis-admin > div{
+  background-color: rgb(46, 46, 46);
+  padding: 15px;
+  
+  }

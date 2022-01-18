@@ -1,0 +1,31 @@
+<div class="main form">
+
+     <form action="postplayer" method="POST">
+        <label>Discipline:</label><br>
+        <select  name="disciplines"><br>
+    {{#each disciplines}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select>
+     <br>   <label>Name:</label><br>
+        <input name="name" /><br><br>
+        <label>Settings:</label><br>
+        <textarea  name="settings"   rows="10" cols="30"  ></textarea><br><br>
+        <label>Biography:</label><br>
+        <textarea  name="biography" rows="10" cols="30"  ></textarea><br><br>
+        <label>Img:</label><br>
+        <input value="player.png" name="img"/><br><br>
+        <label>Country:</label><br>
+        <input name="country"  /><br><br>
+        <label>Role:</label><br>
+        <input name="role"  /><br><br>
+        <input  type="submit" value="Submit" />
+        {{#each errors}}
+       <p style="color: white;">{{this.msg}}</p>
+       {{/each}}
+     </form>
+     
+     <a href="/admin/playersList">Back to list</a>
+     
+     </div>
+     

@@ -1,0 +1,18 @@
+<div class="main">
+     <form action="postteam" method="POST">
+        <label>Disciplin</label><br>
+        <select  name="disciplines">
+    {{#each disciplines}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br><br>
+  <label>Organization:</label><br>
+        <select  name="org">
+    {{#each org}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br><br>
+        <input type="submit" value="Отправить" />
+     </form>
+     <a href="/teams">К списку</a>
+     </div>

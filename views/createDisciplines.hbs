@@ -1,0 +1,14 @@
+<div class="main">
+     <form action="postDisciplines" method="POST">
+        <label>Name:</label><br>
+        <input name="name" ><br><br>
+        <label>Img:</label><br>
+        <input name="img" ><br><br>
+        <input type="submit" value="submit" />  
+    {{#if errors}}
+       {{#each errors}}
+       <p style="color: white;">{{this.msg}}</p>
+       {{/each}}
+    {{/if}}
+     </form>
+</div>

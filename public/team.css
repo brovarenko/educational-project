@@ -1,0 +1,12 @@
+.grid-team-item{
+display: grid;
+grid-gap: 10px ;
+  padding: 20px;
+}
+.grid-team-item > div{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(46, 46, 46);
+}

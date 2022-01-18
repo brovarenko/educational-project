@@ -1,0 +1,10 @@
+<div class="main ">
+     <p><a href="/news/create">Add news</a></p>
+     <div class="grid-dis-admin">
+    
+
+        {{#each news}}
+        <div> {{this.name}}</div> <a id="delete" href='/news/delete/{{this._id}}'>delete</a>
+        {{/each}}
+     </div>
+     </div>

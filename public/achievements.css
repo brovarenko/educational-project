@@ -1,0 +1,13 @@
+.grid-achievements{
+    display: grid;
+     grid-template-columns: 120px 100px 400px 200px 200px;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    
+    grid-row-gap: 10px;
+  }
+  .grid-achievements > div{
+  background-color: rgb(46, 46, 46);
+  padding: 15px;
+  
+  }

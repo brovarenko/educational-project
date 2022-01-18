@@ -1,0 +1,7 @@
+<div class="main">
+    <div class = "grid-dis-admin"><a href="/partners/createPartners">Add Partner</a><br>
+ {{#each partners}}
+<div>{{this.name}}</div>  <a id="delete"  href='/partners/deletePartners/{{this._id}}'>delete</a>      
+ {{/each}}
+     </div>
+</div>

@@ -1,0 +1,27 @@
+.grid-teams-admin{
+    display: grid;
+     grid-template-columns: auto 100px 100px ;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+
+  }
+  .grid-teams-admin > div{
+  background-color: rgb(46, 46, 46);
+  padding: 20px;
+  
+  }
+
+  .grid-teams-admin-p{
+    display: grid;
+     grid-template-columns:  200px 100px ;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+
+  }
+  .grid-teams-admin-p > div{
+  background-color: rgb(46, 46, 46);
+  padding: 20px;
+  
+  }

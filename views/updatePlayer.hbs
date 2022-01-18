@@ -1,0 +1,25 @@
+<div class="main form">
+     
+     <form action="updatePlayer" method="put">
+         <label>Player:</label><br>
+        <select  name="id">
+    {{#each players}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br>
+        
+        
+        <label>Name:</label><br>
+        <input name="name" /><br><br>
+        <label>Settings:</label><br>
+        <textarea  name="settings" rows="10" cols="30" ></textarea><br><br>
+        <label>Biography:</label><br>
+        <textarea  name="biography" rows="10" cols="30" ></textarea><br><br>
+        <label>Img:</label><br>
+        <input name="img" /><br><br>
+        <input  type="submit" formmethod="post" value="submit" />
+     </form>
+     
+     
+     
+     </div>

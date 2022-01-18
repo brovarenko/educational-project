@@ -1,0 +1,9 @@
+<div class="main">
+    <p><a href="/admin/createDisciplines">Add Disciplin</a><br></p>
+    <p><a href='/admin/updateDisciplin'>Update Disciplin</a></p>
+    <div class = "grid-dis-admin">
+ {{#each disciplines}}
+<div>{{this.name}}</div>  <a id="delete"  href='/admin/deleteDisciplin/{{this._id}}'>delete</a>          
+ {{/each}}
+     </div>
+</div>

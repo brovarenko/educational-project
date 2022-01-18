@@ -2,14 +2,26 @@
 <div class="grid-item"> 
     <nav>
 {{#if isNews}}
-<a  href="/">Home</a>  <a id="active"  href="/news">News</a> <a  href="/users">Users</a>
+<a id="active"  href="/NEWS">NEWS</a> <a  href="/matches">MATCHES</a> <a href="/team">TEAM</a> <a href="/achievements">ACHIEVEMENTS</a> <a href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
 {{else if isHome}}
-<a id="active" href="/">Home</a>  <a  href="/news">News</a> <a  href="/users">Users</a>
+  <a  href="/NEWS">NEWS</a> <a  href="/matches">MATCHES</a> <a href="/team">TEAM</a> <a href="/achievements">ACHIEVEMENTS</a> <a href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
 {{else if isUsers}}
-<a  href="/">Home</a>  <a  href="/news">News</a> <a id="active" href="/users">Users</a>
+<a  href="/News">NEWS</a> <a id="active" href="/matches">MATCHES</a> <a href="/team">TEAM</a> <a href="/achievements">ACHIEVEMENTS</a> <a href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
+{{else if isTeam}}
+<a  href="/News">NEWS</a> <a  href="/matches">MATCHES</a> <a id="active" href="/team">TEAM</a> <a href="/achievements">ACHIEVEMENTS</a> <a href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
+{{else if isAchievements}}
+<a  href="/News">NEWS</a> <a  href="/matches">MATCHES</a> <a  href="/team">TEAM</a> <a id="active" href="/achievements">ACHIEVEMENTS</a> <a href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
+{{else if isPartners}}
+<a  href="/News">NEWS</a> <a  href="/matches">MATCHES</a> <a  href="/team">TEAM</a> <a  href="/achievements">ACHIEVEMENTS</a> <a id="active" href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
+{{else if isContacts}}
+<a  href="/News">NEWS</a> <a  href="/matches">MATCHES</a> <a  href="/team">TEAM</a> <a  href="/achievements">ACHIEVEMENTS</a> <a  href="/partners">PARTNERS</a> <a  id="active" href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
+{{else if isLogin}}
+<a  href="/News">NEWS</a> <a  href="/matches">MATCHES</a> <a  href="/team">TEAM</a> <a  href="/achievements">ACHIEVEMENTS</a> <a  href="/partners">PARTNERS</a> <a  id="active" href="/contacts">CONTACTS</a><a  id="active" href="/auth/login">LOGIN</a>
 {{else}}
-<a  href="/">Home</a>  <a  href="/news">News</a> <a  href="/users">Users</a>
+<a  href="/News">NEWS</a> <a  href="/matches">MATCHES</a> <a href="/team">TEAM</a> <a href="/achievements">ACHIEVEMENTS</a> <a href="/partners">PARTNERS</a> <a href="/contacts">CONTACTS</a> <a  href="/auth/login">LOGIN</a>
+
 {{/if}}
+<a id="demo" href="/admin"></a>
 </nav>
  </div>
 

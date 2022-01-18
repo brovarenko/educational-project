@@ -1,0 +1,11 @@
+<div class=" main ">
+     <P><a href="/team/createPlayer">New player</a><br></P> 
+     <p><a  href="/admin/Form">Update player</a></p>
+     <div class="grid-players-admin">
+    
+
+        {{#each player}}
+        <div><p>{{this.name}}</p>    {{this.disciplin.name}}</div> <a id="delete" href="/admin/deletePlayer/{{this._id}}">delete</a> 
+        {{/each}}
+     </div>
+     </div>

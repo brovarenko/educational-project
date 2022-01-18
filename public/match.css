@@ -1,0 +1,17 @@
+.grid-match{
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+ 
+    grid-gap: 10px;
+    text-align:center;
+    color:white;
+   grid-row-gap: 10px;
+  }
+  
+  .grid-match > div {
+  background-color: rgb(46, 46, 46);
+  padding: 20px;
+  border: 1px;
+  border-color: ivory;
+  text-align:center;
+  }

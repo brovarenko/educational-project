@@ -1,0 +1,13 @@
+<div class="main">
+ <p><a href="/achievements/create">Add achievement</a></p>
+    
+     <div class="grid-achievements-admin">
+        <div>Game</div><div>Place</div><div>Tournament</div><div>Date</div><div>Earning</div><p></p>
+         {{#each achievements}}
+         
+          
+             <div>{{this.disciplin.name}}</div><div>{{this.place}}</div><div>{{this.tournament}}</div><div>{{this.date}}</div><div>{{this.earning}}$</div> <a id="delete"  href='/achievements/delete/{{this._id}}'>delete</a>
+        
+        {{/each}}
+     </div>
+     </div>

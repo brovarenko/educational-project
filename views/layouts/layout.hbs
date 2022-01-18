@@ -2,17 +2,45 @@
 <html>
 <head>
     <title>{{title}}</title>
-    <meta charset="utf-8" />
-    <style>
-    #active {background-color:rgb(180, 66, 1);}
-           
-        
+    {{#if showTests}}
+ <link rel="stylesheet" href="/vendor/mocha.css">
+ {{/if}}
+ <script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+
  
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/player.css">
+    <link rel="stylesheet" href="/team.css">
+    <link rel="stylesheet" href="/playerlist.css">
+    <link rel="stylesheet" href="/form.css">
+    <link rel="stylesheet" href="/achievements.css">
+    <link rel="stylesheet" href="/adminAch.css">
+    <link rel="stylesheet" href="/adminDisciplines.css">
+    <link rel="stylesheet" href="/adminMatches.css">
+   <link rel="stylesheet" href="/adminPlayers.css">
+   <link rel="stylesheet" href="/adminTeams.css">
+    <link rel="stylesheet" href="/partners.css">
+     <link rel="stylesheet" href="/news.css">
+     <link rel="stylesheet" href="/match.css">
+      <link rel="stylesheet" href="/players.css">
+      <link rel="stylesheet" href="/diagram.css">
+       <link rel="stylesheet" href="/btn.css">
+    <style>
+    #active {background-color:rgb(146, 0, 0);}
+           
+
+ .stat{
+    background-color: rgb(46, 46, 46);
+  padding: 20px;
+  border: 1px;
+  border-color: ivory;
+  text-align:center;
+ }
   nav a:link {
-  background-color: rgb(92, 91, 91);
+  background-color: rgb(46, 46, 46);
   color: rgb(255, 255, 255);
   
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -20,7 +48,7 @@
 }
 
   nav a:hover {
-  background-color: rgb(180, 66, 1);
+  background-color: rgb(146, 0, 0);
   color: white;
 }
 a:link, a:visited {
@@ -31,78 +59,154 @@ a:link, a:visited {
 }
 a:hover, a:active {
  text-decoration: none;
-  color: rgb(180, 66, 1);
+  color: rgb(146, 0, 0);
 }
 body{
 background-color: black;
 display: grid;
   justify-content: center;
   
-  grid-template-columns: 1100px;
+  grid-template-columns: 1200px;
   grid-template-rows: auto auto auto;
-  padding-top: 5%;
+ 
 }
 .grid-container-logo {
   display: grid;
-  grid-template-columns: auto auto auto;
-  background-color:rgb(92, 91, 91);
+  grid-template-columns: auto auto auto auto;
+  background-color:rgb(77, 77, 77);
   padding: 10px;
   grid-gap: 10px;
-  justify-content: space-between;
+  
 }
 .grid-item-logo {
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  
   text-align: center;
   
 }
+ .disciplines{
+   background-color: rgb(146, 0, 0);
+   color: white;
+   padding: 5px;
+   width:fit-content
+ }
  
+ .grid-matches{
+   display: grid;
+   grid-template-columns: 80px 150px 80px 80px  60px 80px 80px 500px ;
+   text-align: justify;
+   color:white;
+  grid-row-gap: 10px;
+ }
+ 
+ .grid-matches > div {
+ background-color: rgb(46, 46, 46);
+ padding: 20px;
+ border: 1px;
+ border-color: ivory;
+ }
  
 .grid-item {
-   background-color: rgb(55, 56, 56);
+   background-color: rgb(46, 46, 46);
    display: inline-grid;
-   padding: 15px;
+   padding: 10px;
    grid-gap: 10px;
+  color:white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  grid-row-gap: 10px;
+}
+   
+}
+.grid-m{
+  text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+}
+.grid-m >a{
+   background-color: rgb(46, 46, 46);
+  padding: 15px;
 }
 .grid-item2 {
-   background-color: rgb(55, 56, 56);
+   background-color: rgb(46, 46, 46);
    display: grid;
    padding: 15px;
    grid-gap: 10px;
    grid-template-columns: 215px 600px auto;
+  
+   
 }
 .grid-item-post {
    
-   border: 1px solid rgba(0, 0, 0, 0.8);
+   
    padding: 10px;
+   
 }
 
 .main{
-  background-color: rgb(92, 91, 91);
+  background-color: rgb(77, 77, 77);
+ padding: 20px;
+ color: white;
  
 }
 nav {
   
 }
 .footer {
-  background-color: #777;
+  background-color: rgb(46, 46, 46);
   padding: 10px;
   text-align: center;
   color: white;
 }
-
-
-
+#delete{
+   width:fit-content;
+   height: fit-content;
+    background-color: rgb(146, 0, 0);
+    color: white;
+    padding: 12px ;
+    margin: 10px ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#delete:hover {
+    background-color: rgb(100, 0, 0);
+  }
     </style>
 
+{{#if showTests}}
+ <link rel="stylesheet" href="/vendor/mocha.css">
+Страничное тестирование 69
+ {{/if}}
+ <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+ 
 </head>
 <body >
     {{> header}}
 
     {{> menu}}
-      
+ 
+    
+
     {{{body}}}
       
     {{> footer}}
+    {{#if showTests}}
+ <div id="mocha"></div>
+ 
+ <script src="/vendor/mocha.js"></script>
+ <script src="/vendor/chai.js"></script>
+ <script>
+ mocha.ui('tdd');
+ var assert = chai.assert;
+ </script>
+ <script src="/qa/tests-global.js"></script>
+ {{#if pageTestScript}}
+ <script src="{{pageTestScript}}"></script>
+ {{/if}}
+ <script>mocha.run();</script>
+ {{/if}}
+ <script> if( localStorage.getItem('test')==1){
+document.getElementById("demo").innerHTML = "ADMIN";
+}</script>
 </body>
 <html>

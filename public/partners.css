@@ -1,0 +1,12 @@
+.grid-partners{
+    display: grid;
+     grid-template-columns: 250px 800px ;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+  }
+  .grid-partners > div{
+  background-color: rgb(46, 46, 46);
+  padding: 15px;
+  }
+  

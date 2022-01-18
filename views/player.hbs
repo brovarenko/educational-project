@@ -1,0 +1,9 @@
+<div class="main">
+               
+     <div class="grid-players">
+    
+        {{#each team.player}}
+        <div><a  href="/team/player/{{this._id}}"><p><img  src="/img/{{this.img}}" alt=" logo" width="200" height="200"></p><p>{{this.name}}</p></a> </div> 
+           {{/each}}
+     </div>
+     </div>

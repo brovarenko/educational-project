@@ -1,0 +1,25 @@
+<div class="main">
+     <form action="postplayers" method="POST">
+        <label>Select player:</label><br>
+        <select  name="player">
+    {{#each players}}
+    <option value={{this._id}}>{{this.name}}   {{this.disciplin.name}}</option>
+    {{/each}}
+    </select><br>
+    <label>Select disciplin:</label><br>
+        <select  name="disciplin">
+    {{#each disciplines}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+    </select><br>
+    <label>Select team:</label><br>
+        <select  name="team">
+    {{#each team}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+    </select><br>
+  
+        <input type="submit" value="Add" />
+     </form>
+     <a href="/team">К списку</a>
+     </div>

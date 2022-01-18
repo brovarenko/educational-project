@@ -1,0 +1,23 @@
+<div class="main">
+    
+     <form action="postAchievements" method="POST">
+        <label>Disciplin:</label><br>
+        <select  name="disciplin">
+    {{#each disciplines}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br><br>
+        <label>Place:</label><br>
+        <input name="place" /><br><br>
+        <label>Tournament:</label><br>
+        <input  name="tournament"><br>
+        <label>Earning:</label><br>
+        <input  name="earning"><br>
+        <label>Date</label><br>
+        <input name="date" type="datetime-local" /><br><br>
+        
+  
+        <input type="submit" value="Отправить" />
+     </form>
+     
+</div>

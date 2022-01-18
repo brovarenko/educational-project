@@ -1,0 +1,30 @@
+<div class='main '>
+  <div id="disciplines" >{{match.disciplines.name}}</div> <h1><div>{{match.name}}</div></h1>
+    <div class=" grid-match">
+    
+    
+             <div><img  src="/img/{{match.teams.[0].organization.img}}" alt=" logo" width="100" height="100"><h1>{{match.teams.[0].organization.name}}</h1><dt>{{match.teams.[0].player.[0].name}}</dt>
+  <dt>{{match.teams.[0].player.[1].name}}</dt>
+  <dt>{{match.teams.[0].player.[2].name}}</dt>
+  <dt>{{match.teams.[0].player.[3].name}}</dt>
+  <dt>{{match.teams.[0].player.[4].name}}</dt></div>
+             <div ><div style="font-weight: bold;font-size:100px;" >{{match.score.[0]}}:{{match.score.[1]}}</div><div class="stat"><p>Meeting statistics</p><p>Opponent: {{match.teams.[1].organization.name}}</p><p>Total games: {{count}}</p>
+  <p>{{win}}% wins</p><p>{{draw}}% draw</p><p>{{defeat}}% defeat</p></div></div>
+             <div><img  src="/img/{{match.teams.[1].organization.img}}" alt=" logo" width="100" height="100"><h1>{{match.teams.[1].organization.name}}</h1><dt>{{match.teams.[1].player.[0].name}}</dt>
+  <dt>{{match.teams.[1].player.[1].name}}</dt>
+  <dt>{{match.teams.[1].player.[2].name}}</dt>
+  <dt>{{match.teams.[1].player.[3].name}}</dt>
+  <dt>{{match.teams.[1].player.[4].name}}</dt></div>
+             
+            
+  
+  
+
+   </div>
+   
+   
+  
+  
+   <p><a href="/matches/history/{{match.teams.[1]._id}}">History</a></p>
+</div>
+

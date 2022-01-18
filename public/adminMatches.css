@@ -1,0 +1,14 @@
+.grid-matches-admin{
+    display: grid;
+    grid-template-columns: 80px 150px 80px  60px 100px 400px auto;
+    text-align: justify;
+    color:white;
+   grid-row-gap: 10px;
+  }
+  
+  .grid-matches-admin > div{
+  background-color: rgb(46, 46, 46);
+  padding: 20px;
+  border: 1px;
+  border-color: ivory;
+  }

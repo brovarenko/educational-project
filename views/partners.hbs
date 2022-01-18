@@ -1,0 +1,16 @@
+<div class="main">
+  <table style= " border-spacing: 15px;"><tr>
+ {{#each disciplin}}
+                
+ {{/each}}
+          </tr></table>
+    
+     <div class="grid-partners">
+         {{#each partners}}
+         
+          
+             <div> <a href="{{this.url}}"><img  src="/img/{{this.img}}" alt="news image" width="200" height="150"></a></div><div><h1>{{this.name}}</h1>{{this.description}}</div>
+          
+        {{/each}}
+     </div>
+     </div>

@@ -1,0 +1,13 @@
+.grid-news {
+    display: grid;
+     grid-template-columns: 250px auto ;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+ }    
+
+ .grid-news > div {
+   background-color: rgb(46, 46, 46);
+  padding: 11px;
+    
+ }

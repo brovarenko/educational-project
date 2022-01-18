@@ -1,0 +1,28 @@
+.item1 { grid-area: name; }
+.item2 { grid-area: img; }
+.item3 { grid-area: biography; }
+.item4 { grid-area: settings; }
+.item5 { grid-area: country; }
+.item6 { grid-area: role; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'img img name country '
+    'img img role settings'
+    'img img biography biography';
+    
+    
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgb(46, 46, 46);
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  color:white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}

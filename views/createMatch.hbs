@@ -1,0 +1,32 @@
+<div class="main">
+     <form action="postmatch" method="POST">
+        <label>Disciplin:</label><br>
+        <select  name="disciplines">
+    {{#each disciplines}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br><br>
+   <label>Team 1:</label><br>
+        <select  name="team1">
+    {{#each teams}}
+    <option value={{this._id}}>{{this.organization.name}} {{this.disciplin.name}}</option>
+    {{/each}}
+  </select><br><br>
+   <label>Team 2:</label><br>
+        <select  name="team2">
+    {{#each teams}}
+    <option value={{this._id}}>{{this.organization.name}} {{this.disciplin.name}}</option>
+    {{/each}}
+  </select><br><br>
+        <label>Name</label><br>
+        <input name="name" /><br><br>
+        <label>Date</label><br>
+        <input name="date" type="datetime-local" /><br><br>
+        <label>Score 1</label><br>
+        <input name="score1" value="0"  /><br><br>
+        <label>Score 2</label><br>
+        <input name="score2" value="0" /><br><br>
+        <input type="submit" value="Отправить" />
+     </form>
+     <a href="/matches">К списку</a>
+     </div>

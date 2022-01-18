@@ -1,10 +1,21 @@
 <div class="main">
-    <h1>Добавление пользователя</h1>
+    
      <form action="postNews" method="POST">
-        <label>Name</label>
+        <label>Disciplin:</label><br>
+        <select  name="disciplines">
+    {{#each disciplines}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br><br>
+        <label>Name:</label><br>
         <input name="name" /><br><br>
-        <label>Text</label>
-        <input name="text"   /><br><br>
+        <label>Img:</label><br>
+        <input type="text" name="img"><br>
+          <label>Text:</label><br>
+        <textarea  name="text" rows="10" cols="30" >News text</textarea><br><br>
+        
+        
+  
         <input type="submit" value="Отправить" />
      </form>
      <a href="/news">News</a>

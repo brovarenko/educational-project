@@ -1,0 +1,25 @@
+<div class="main">
+        <form action="postPartners" method="POST">
+        <label>Name:</label><br>
+        <input name="name" /><br><br>
+        <label>Description:</label><br>
+        <textarea  name="description" rows="10" cols="30"  ></textarea><br><br>
+         <label>Url:</label><br>
+        <input name="url"><br>
+         <label>Img:</label><br>
+        <input name="img"><br>
+        <label>Organization:</label><br>
+        <select  name="organization">
+    {{#each organizations}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br><br>
+        <input type="submit" value="Отправить" />
+        {{#if errors}}
+       {{#each errors}}
+       <p style="color: white;">{{this.msg}}</p>
+       {{/each}}
+    {{/if}}
+        </form>
+        <a href="/admin/orgList">Back</a>
+</div>

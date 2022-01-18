@@ -1,10 +1,9 @@
- <div class="grid-item main">
- <a href="/users/create">Добавить пользователя</a>
-    <h1>Список пользователей</h1>
-     <table>
-         <tr><th>Имя</th><th>Возраст</th></tr>
-         {{#each users}}
-            <tr><td>{{this.name}}</td><td>{{this.age}}</td></tr>
+ <div class=" main">
+ <p> <a href="/auth/register">Register</a> </p>
+    
+     <div class="grid-dis-admin">
+         {{#each user}}
+            <div>{{this.email}} |   {{this.roles}}</div> <a id="delete" href='/auth/delete/{{this._id}}'>delete</a>
          {{/each}}
-     </table>
+     </div>
      </div>

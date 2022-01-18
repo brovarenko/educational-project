@@ -1,0 +1,19 @@
+<div class="main form">
+     
+     <form action="updateOrg" method="put">
+         <label>Organization:</label><br>
+        <select  name="id">
+    {{#each org}}
+    <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select><br>
+        <label>Name:</label><br>
+        <input name="name" /><br><br>
+        <label>Img:</label><br>
+        <input name="img" /><br><br>
+        <input  type="submit" formmethod="post" value="submit" />
+     </form>
+     
+     
+     
+     </div>

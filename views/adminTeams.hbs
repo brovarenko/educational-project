@@ -1,0 +1,12 @@
+<div class=" main ">
+     <p><a href="/team/create">New Team</a><br></p>
+     <P><a href="/team/addplayertoteam">Add player to team</a><br></P>
+     <div class="grid-teams-admin">
+    
+
+        {{#each teams}}
+        <div > {{this.organization.name}}<div class="grid-teams-admin-p"> {{#each this.player}}<div> {{this.name}}</div><div><a id="delete" href="/team/players/{{../_id}}/deleteplayer/{{this._id}}">delete</a></div> {{/each}}</div></div><div>{{this.disciplin.name}}</div> <a id="delete" href="/team/delete/{{this._id}}">delete</a> 
+        
+        {{/each}}
+     </div>
+     </div>

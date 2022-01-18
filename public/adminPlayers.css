@@ -1,0 +1,13 @@
+.grid-players-admin{
+    display: grid;
+     grid-template-columns: auto 80px;
+    text-align: justify;
+    color:rgb(253, 253, 253);
+    grid-row-gap: 10px;
+
+  }
+  .grid-players-admin > div{
+  background-color: rgb(46, 46, 46);
+  padding: 15px;
+  
+  }

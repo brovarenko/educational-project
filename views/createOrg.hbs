@@ -1,0 +1,15 @@
+<div class="main">
+        <form action="postOrg" method="POST">
+        <label>Name:</label><br>
+        <input name="name" /><br><br>
+        <label>Img:</label><br>
+        <input type="img" name="img"><br>
+        <input type="submit" value="Submit" />
+        {{#if errors}}
+       {{#each errors}}
+       <p style="color: white;">{{this.msg}}</p>
+       {{/each}}
+    {{/if}}
+        </form>
+        <a href="/admin/orgList">Back</a>
+</div>

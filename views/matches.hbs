@@ -1,0 +1,23 @@
+<div class="main ">
+ <table style= " border-spacing: 15px;"><tr>
+ {{#each disciplin}}            
+    <th><a href="/matches/sort/{{this._id}}" >{{this.name}} </a> </th>
+ {{/each}}
+          </tr></table>
+          <p><a class="btn" href="/matches/past">Past</a>  <a class="btn" href="/matches/f"> Upcoming</a></p>
+           
+          <div >
+         {{#each match}}
+          <a class=" grid-matches"  href="/matches/match/{{this._id}}/{{this.teams.[1]._id}}/{{this.disciplines._id}}">
+             <div ><img  src="/img/{{this.disciplines.img}}" alt=" logo" width="30" height="30"></div>
+             <div>{{this.date}}</div><div>{{this.teams.[0].organization.name}}</div>
+             <div><img  src="/img/{{this.teams.[0].organization.img}}" alt=" logo" width="45" height="45"></div>
+             <div style="font-weight: bold;">{{this.score.[0]}}:{{this.score.[1]}}</div>
+             <div><img  src="/img/{{this.teams.[1].organization.img}}" alt=" logo" width="45" height="45"></div>
+             <div>{{this.teams.[1].organization.name}}</div>
+             <div>{{this.name}}</div>
+          </a> 
+        {{/each}}
+        </div>
+        
+     </div>
